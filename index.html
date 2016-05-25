@@ -7,41 +7,39 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
  	
+    <style>
 
+    body {
+    	font-family: Verdana, Geneva, sans-serif;
+    }
 
+	 #box {
+	 width:200px;
+	 height:200px;
+	 background-color:red;
+	 display: none;
+	 position: relative;
+ 	}
 
+ 	.bold {
+ 		font-weight: bold;
+ 	}
 
-</head>
+ </style>
 
-<body>
+ </head>
 
-	<p>How many fingers am I holding up?</p>
-	<input id="answer"/>
-	<button id="myButton">Submit</button>
+ <body>
 
-	<script type="text/javascript">
+ 	<h1>Test you reactions!</p>
 
-		document.getElementById("myButton").onclick=function() {
+ 	<p>Click on the boxes and circles as quickly as you can!</p>
 
-		var x=Math.random();
+ 	<p class="bold">Your time: <span id="time">0</span>s</p>
+ 
+ 	<div id="box"></div>
 
-		x=6*x;
-
-		x=Math.floor(x);
-
-		if (x==document.getElementById("answer").value) {
-
-			alert("That's correct!");
-
-		} else {
-
-			alert("That's wrong! My number was "+x+".");
-
-		}
-
-		}
-
-	</script>
+ 	<script type="text/javascript" src="scripts.js"></script>
 
 
 </body>
